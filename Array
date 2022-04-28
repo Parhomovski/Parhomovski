@@ -1,0 +1,22 @@
+<?php
+function fun($array){
+{if (empty($array)) { return $array;}}
+
+$count_Pos_element=0;//the count of positives numbers
+$sum_Neg_element=0;//sum of negative numbers
+foreach ($array as $element)
+    {if ($element>0) {
+        $count_Pos_element=$count_Pos_element + 1;}
+        else {$sum_Neg_element=$sum_Neg_element+$element;}
+
+}
+ // {if (count($array)==0) { echo ' empty array '; } }
+
+$newArray=[$count_Pos_element, $sum_Neg_element];
+return($newArray);
+}
+
+$array=[];
+
+var_dump(fun($array));
+?>
