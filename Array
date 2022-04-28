@@ -16,7 +16,4 @@ $newArray=[$count_Pos_element, $sum_Neg_element];
 return($newArray);
 }
 
-$array=[];
-
-var_dump(fun($array));
 ?>
