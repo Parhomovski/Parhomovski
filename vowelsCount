@@ -1,0 +1,6 @@
+function getCount($str) {
+$pattern='/a|e|i|o|u/';
+$vowelsCount = 0;
+preg_match_all($pattern, $str, $matches);
+    return $vowelsCount= count($matches, COUNT_RECURSIVE)-1;
+}
