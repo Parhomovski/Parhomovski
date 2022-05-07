@@ -1,0 +1,10 @@
+ function getDigitsSum($num) {
+        return array_sum(str_split($num));}
+$num=0;
+$sum=0;
+for ($i=0; $i <2030 ; $i++) {
+$num= $i;
+if (getDigitsSum($num) == 13) {
+$sum=$i;
+var_dump($sum);}
+}
