@@ -1,0 +1,29 @@
+<?php
+
+function divisors($num){ //функция находит делители - it should return divisors.
+    $divisors=[];
+for ($i=2; $i <$num ; $i++) {
+    if ($num%$i === 0) { $divisors[]=$i;}
+}  return $divisors;}
+
+
+function getPrimeDivisors($primes)
+{// функция выбирает простые числа - it shoudl retune primes but why it doesn`t work correctly?pr
+    for ($i=2; $i < $primes ; $i++) {
+    //if ($i==1 or $i==0) return false;
+    if ($primes % $i == 0) {
+    return false;}
+     return true;}
+}
+
+$num=100; // if we set this variable, the result will be 5 and 25, but 25 is not prime. 
+$array=divisors($num);
+
+foreach ($array as $key => $element){
+    if (!getPrimeDivisors($element)) {
+    unset($array[$key]);}
+}
+
+var_dump($array);
+
+?>
