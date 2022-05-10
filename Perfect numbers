@@ -1,0 +1,22 @@
+<?php
+function getDivisorssum($div){
+$divisor=1;
+for ($i=2; $i <$div ; $i++) {
+    if ($div%$i == 0) {
+        $divisor+=$i;
+    }
+}
+return $divisor;
+}
+
+
+$num=range(1,10000);
+foreach ($num as $key=>$element){
+    $array[]=getDivisorssum($element);}
+$newArray=(array_combine($num,$array));
+foreach ($newArray as $key=>$value){
+    if ($key==$value) {var_dump($newArray[$key]);}
+}
+
+
+?>
