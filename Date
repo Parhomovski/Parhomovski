@@ -1,0 +1,27 @@
+<?php
+    if (empty($_GET)) {
+?>
+    <form action="" method="GET">
+    <input name="day" value="<?= $_GET['day'] ??  date('d')?>">
+    <input name="month" value="<?= $_GET['month'] ??  date('m')?>">
+    <input name="year" value="<?= $_GET['year'] ??  date('Y')?>">
+
+        <input type="submit">
+    </form>
+<?php
+    } else {
+
+echo "<br>";}
+
+if (!empty($_GET))
+    {$day=$_GET['day'];
+$month=$_GET['month'];
+$year=$_GET['year'];
+
+echo "$day.$month.$year<br>";
+$n = mktime(0,0,0,$month, $day,$year);
+$c= mktime(0,0,0,12,31); // сколько секунд осталось до конца года.
+$new=($c-$n)/86400;
+echo 'До конца года осталось - '. $new;
+}
+?>
